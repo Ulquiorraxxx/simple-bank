@@ -8,23 +8,27 @@
 balance = 0
 
 while True:
-    print("\nBanking Options:")
-    print("1. Deposit")
-    print("2. Withdraw")
-    print("3. Check Balance")
-    print("4. Exit")
+    print("\nBankas opcijas:")
+    print("1. Ielikt naudu")
+    print("2. Izņemt naudu")
+    print("3. Pārbaudīt Balance")
+    print("4. Iziet")
 
     choice = input("Enter your choice (1-4): ")
 
     if choice == '1':
-        # papildini kodu šeit
-        pass
+        bal_add = int(input("Summa: "))
+        balance = balance + bal_add
+        print("Balance = " , balance , "$")
     elif choice == '2':
-        # papildini kodu šeit
-        pass
+        bal_remove = int(input("Summa: "))
+        if balance < bal_remove:
+            print("Nepietiek līdzekļu")
+        else:
+            balance = balance - bal_remove
+            print("Jūs izņēmāt: " , bal_remove , "\nAtlikušais balance = " , balance , "$")    
     elif choice == '3':
-        # papildini kodu šeit
-        pass
+        print("Balance = " , balance)
     elif choice == '4':
         print("Exiting the banking system. Thank you!")
         break
