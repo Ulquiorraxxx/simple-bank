@@ -5,7 +5,7 @@
 # Cipari https://www.w3schools.com/python/python_numbers.asp
 # 
 
-balance = 0
+balance = float(0)
 
 while True:
     print("\nBankas opcijas:")
@@ -17,18 +17,18 @@ while True:
     choice = input("Enter your choice (1-4): ")
 
     if choice == '1':
-        bal_add = int(input("Summa: "))
+        bal_add = float(input("Summa: "))
         balance = balance + bal_add
         print("Balance = " , balance , "$")
     elif choice == '2':
-        bal_remove = int(input("Summa: "))
+        bal_remove = float(input("Summa: "))
         if balance < bal_remove:
             print("Nepietiek līdzekļu")
         else:
             balance = balance - bal_remove
             print("Jūs izņēmāt: " , bal_remove , "\nAtlikušais balance = " , balance , "$")    
     elif choice == '3':
-        print("Balance = " , balance)
+        print("Balance = " , balance , "$")
     elif choice == '4':
         print("Exiting the banking system. Thank you!")
         break
